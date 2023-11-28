@@ -18,6 +18,8 @@ import (
 type CapiEvent struct {
 	PixelId *string `json:"pixel_id,omitempty"`
 	AppId *string `json:"app_id,omitempty"`
+	DeviceModel *string `json:"device_model,omitempty"`
+	OSVersion *string `json:"os_version,omitempty"`
 	SnapAppId *string `json:"snap_app_id,omitempty"`
 	EventType *string `json:"event_type,omitempty"`
 	EventConversionType *string `json:"event_conversion_type,omitempty"`
@@ -139,6 +141,14 @@ func (o *CapiEvent) HasAppId() bool {
 // SetAppId gets a reference to the given string and assigns it to the AppId field.
 func (o *CapiEvent) SetAppId(v string) {
 	o.AppId = &v
+}
+
+func (o *CapiEvent) SetDeviceModel(v string) {
+	o.DeviceModel = &v
+}
+
+func (o *CapiEvent) SetOSVersion(v string) {
+	o.OSVersion = &v
 }
 
 // GetSnapAppId returns the SnapAppId field value if set, zero value otherwise.
@@ -1428,6 +1438,12 @@ func (o CapiEvent) MarshalJSON() ([]byte, error) {
 	}
 	if o.AppId != nil {
 		toSerialize["app_id"] = o.AppId
+	}
+	if o.DeviceModel != nil {
+		toSerialize["device_model"] = o.DeviceModel
+	}
+	if o.OSVersion != nil {
+		toSerialize["os_version"] = o.OSVersion
 	}
 	if o.SnapAppId != nil {
 		toSerialize["snap_app_id"] = o.SnapAppId
