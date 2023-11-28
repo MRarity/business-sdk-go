@@ -3,7 +3,6 @@ module github.com/MRarity/business-sdk-go
 go 1.18
 
 require (
-	github.com/Snapchat/business-sdk-go v1.0.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.8.4
 	github.com/umahmood/soundex v0.0.0-20200613124646-2a2ad9acb249

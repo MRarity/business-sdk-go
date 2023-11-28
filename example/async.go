@@ -6,13 +6,13 @@ import (
 	"strconv"
 	"time"
 
-	sdk "github.com/Snapchat/business-sdk-go"
+	sdk "github.com/MRarity/business-sdk-go"
 	log "github.com/sirupsen/logrus"
 )
 
 func runAsyncSample(authToken, pixelId string) {
 	capiClient := sdk.NewCapiClient(authToken)
-	//capiClient := sdk.NewCapiClient(auth_token, sdk.WithLaunchPadUrl("url_here"))
+	// capiClient := sdk.NewCapiClient(auth_token, sdk.WithLaunchPadUrl("url_here"))
 	capiClient.SetDebugging(true)
 
 	event1 := sdk.NewCapiEvent()
